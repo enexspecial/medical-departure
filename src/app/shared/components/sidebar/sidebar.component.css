@@ -1,0 +1,24 @@
+.sidebar{
+    width:250px;
+    position: fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    background-color: #fff;
+    box-shadow: 1px 5px 10px #d1d1d1;
+    z-index:1;
+}
+
+.sidebar .logo{
+    text-align: center;
+    margin: 20px 0px 40px;
+}
+
+.sidebar .logo img{
+    width:50%;
+}
+
+.sidebar .logo-text{
+    text-align: center;
+    margin: 20px 0px 40px;
+}
