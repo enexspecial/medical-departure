@@ -1,1 +1,11 @@
-<p>contents works!</p>
+    <div class="main-content">
+        <button>Add Post</button>
+        <div *ngFor="let res of response" class="content">
+            <h3>{{res.title}}</h3>
+            <div>
+                {{res.body}}
+            </div>
+
+        </div>
+
+    </div>

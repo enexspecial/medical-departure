@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppService } from "../../app.service";
 
 @Component({
   selector: 'app-contents',
@@ -7,4 +8,34 @@ import { Component } from '@angular/core';
 })
 export class ContentsComponent {
 
+  response:Response[] = []
+
+  constructor( private _appService:AppService){
+
+  }
+
+
+  ngOnInit(){
+
+    // console.log("okay to test",this._appService.getData)
+    this._appService.getData().subscribe((res:any)=>{
+      this.response = res;
+    })
+
+  }
+
+
+  ngOnDestroy(){
+   
+  }
+
+}
+
+
+
+export interface Response{
+  id:Number;
+  userId:Number;
+  title:String;
+  body:String;
 }
