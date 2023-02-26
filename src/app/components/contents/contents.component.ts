@@ -41,6 +41,10 @@ export class ContentsComponent {
     this._router.navigate(["edit-post", res.id]);
   }
 
+  deletePost(res:any):void{
+    
+  }
+
 }
 
 

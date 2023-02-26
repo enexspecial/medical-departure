@@ -1,27 +1,2 @@
-.main-content{
-    display:flex;
-    margin:10px 30px;
-    padding:25px 45px;
-    flex-direction: column;
-}
-
-.main-content .content{
-    display: flex;
-    flex-direction: row;
-    width:900px;
-    align-items: center;
-}
 
 
-.content-img{
-    border-radius: 50%;
-    height: 100px;
-    width:100px;
-}
-
-
-.content-post-btn{
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 25px;
-}
