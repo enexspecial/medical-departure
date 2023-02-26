@@ -25,23 +25,23 @@ export class AppService {
               return data
            }),
            catchError((err)=>{
-              return throwError("Something went wrong")
+              return throwError(err)
            })
            );  
   }
 
 
-  postData(){
-
+  postData(data:any){
+    return this._http.post("https://jsonplaceholder.typicode.com/posts", data)
   }
 
 
-  updateData(){
-
+  updateData(data:any, id:Number){
+      return this._http.put(`https://jsonplaceholder.typicode.com/posts/${id}`, data)
   }
 
-  deleteData(){
-
+  deleteData(id:Number){
+      return this._http.delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
   }
 
 

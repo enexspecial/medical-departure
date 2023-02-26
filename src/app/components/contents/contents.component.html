@@ -1,11 +1,21 @@
-    <div class="main-content">
-        <button>Add Post</button>
-        <div *ngFor="let res of response" class="content">
-            <h3>{{res.title}}</h3>
-            <div>
-                {{res.body}}
-            </div>
+<div class="main-content">
+  <div class="content-post-btn">
+    <button class="btn" (click)="addPost()">Add Post</button>
+  </div>
 
-        </div>
-
+  <div *ngFor="let res of response" class="content">   
+    <div class="">
+      <h3 class="content-title">{{ res.title }}</h3>
+      <img src="../../../assets/avatar.png" alt="Avatar" class="content-img" />
+      <div class="content-body">
+        {{ res.body }}
+      </div>
+      <div class="content-action">
+        <a href="#" (click)="editPost(res)">Edit</a>
+        &nbsp;&nbsp;
+        <a href="#"> Delete</a>
+      </div>
+      <br />
     </div>
+  </div>
+</div>

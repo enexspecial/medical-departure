@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AppService } from "../../app.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-contents',
@@ -10,14 +11,17 @@ export class ContentsComponent {
 
   response:Response[] = []
 
-  constructor( private _appService:AppService){
+  constructor( 
+    private _appService:AppService,
+    public _router:Router
+    
+    ){
 
   }
 
 
   ngOnInit(){
 
-    // console.log("okay to test",this._appService.getData)
     this._appService.getData().subscribe((res:any)=>{
       this.response = res;
     })
@@ -25,8 +29,16 @@ export class ContentsComponent {
   }
 
 
-  ngOnDestroy(){
+  ngOnDestroy():void{
    
+  }
+
+  addPost():void{
+    this._router.navigateByUrl("/add-post");
+  }
+
+  editPost(res:any):void{
+    this._router.navigate(["edit-post", res.id]);
   }
 
 }
