@@ -22,7 +22,7 @@ export class AddPostComponent {
   onSubmit():void{
     this._appService.postData(this.postForm.value).subscribe((res:any)=>{
       if(res){
-        alert("successful");
+        alert(res);
         this._router.navigateByUrl("/")
       }
 

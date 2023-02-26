@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AppService } from 'src/app/app.service';
+import {  FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-edit-post',
@@ -11,15 +12,30 @@ export class EditPostComponent {
 
 
 
-  
+editForm = new FormGroup({
+    title: new FormControl(''),
+    body: new FormControl('')
+})  
 
-  constructor(private _activatedRoute: ActivatedRoute, private _appService:AppService){ }
+editForms = {
+  title:"",
+  body:""
+}
+
+constructor(private _activatedRoute: ActivatedRoute, private _appService:AppService){ }
 
   ngOnInit(){ 
      
   }
+
+
+  onSubmit():void{
+
+  }
  
   
+
+  // how to bind data in angular with reactive form?
 
 
 

@@ -3,10 +3,10 @@
     <button class="btn" (click)="addPost()">Add Post</button>
   </div>
 
-  <div *ngFor="let res of response" class="content">   
+  <div *ngFor="let res of response" class="content">
+    <img src="../../../assets/avatar.png" alt="Avatar" class="content-img" />
     <div class="content-area">
-      <h3 class="content-title">{{ res.title }}</h3>
-      <img src="../../../assets/avatar.png" alt="Avatar" class="content-img" />
+      <h3 class="content-title">Title: {{ res.title }}</h3>
       <div class="content-body">
         {{ res.body }}
       </div>

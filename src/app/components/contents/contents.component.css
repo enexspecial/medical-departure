@@ -1,0 +1,25 @@
+.content{
+    display: flex;
+    flex-direction: row;
+    padding:10px;
+}
+
+.content-area{
+    margin-left:50px;
+}
+
+.content-body{
+    margin-top:30px;
+    width:500px;
+    padding:5px;
+}
+
+
+
+
+
+.content-area .content-action{
+    display:flex;
+    margin-top: 15px;
+    margin-left: 10px;
+}

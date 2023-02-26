@@ -15,13 +15,13 @@ export class AppService {
 
   }
 
-  set editData(data: any){
-    localStorage.setItem("edit-data",JSON.stringify(data))
-  }
+  // set editData(data: any){
+  //   localStorage.setItem("edit-data",JSON.stringify(data))
+  // }
 
-  get editData(){
-    return localStorage.getItem("edit-data")
-  }
+  // get editData(){
+  //   return localStorage.getItem("edit-data")
+  // }
 
 
 
