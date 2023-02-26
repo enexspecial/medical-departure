@@ -15,11 +15,19 @@ export class AppService {
 
   }
 
+  set editData(data: any){
+    localStorage.setItem("edit-data",JSON.stringify(data))
+  }
+
+  get editData(){
+    return localStorage.getItem("edit-data")
+  }
+
 
 
   // 
 
-  getData(){
+  getData():Observable<any>{
     return this._http.get("https://jsonplaceholder.typicode.com/posts")
            .pipe(map((data)=>{
               return data
@@ -29,6 +37,7 @@ export class AppService {
            })
            );  
   }
+
 
 
   postData(data:any){

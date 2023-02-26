@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+// import form module
+import { FormsModule, ReactiveFormsModule} from "@angular/forms";
 // import app service
 import { AppService } from "./app.service";
 // import http 
@@ -23,7 +25,10 @@ import { AddPostComponent } from './components/add-post/add-post.component';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
+
   ],
   providers: [
     AppService,
