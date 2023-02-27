@@ -13,13 +13,16 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { SharedModule } from './shared/shared.module';
 import { ContentsComponent } from './components/contents/contents.component';
 import { AddPostComponent } from './components/add-post/add-post.component';
-
+import { EditPostComponent } from './components/edit-post/edit-post.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContentsComponent,
-    AddPostComponent
+    AddPostComponent,
+    EditPostComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,7 @@ import { AddPostComponent } from './components/add-post/add-post.component';
     SharedModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
 
   ],
   providers: [
